@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 
 #constants/spaces
 C=3.48e-11
+
 t = np.logspace(0,8,100)
 g = np.logspace(0,6,1000)
 zeros = np.full(len(g),1e-200)
@@ -14,6 +15,9 @@ n = np.zeros((100,1000))
 n[0,:] = np.ones(1000)
 n[0,:350] = np.zeros(350)
 n[0,-10:] = np.zeros(10)
+# gmax = 1e2
+# gci  = np.argmin(np.abs(g-gmax))
+#n[0,:gci]
 
 #injectionarray
 inj= np.full(len(g),1)
